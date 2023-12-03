@@ -76,18 +76,18 @@ for (let i = 0; i < selectItems.length; i++) {
 }
 
 // filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+const fiter_elements = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
 
-  for (let i = 0; i < filterItems.length; i++) {
+  for (let i = 0; i < fiter_elements.length; i++) {
 
     if (selectedValue === "all") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
+      fiter_elements[i].classList.add("active");
+    } else if (selectedValue === fiter_elements[i].dataset.category) {
+      fiter_elements[i].classList.add("active");
     } else {
-      filterItems[i].classList.remove("active");
+      fiter_elements[i].classList.remove("active");
     }
 
   }
@@ -115,24 +115,24 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+// // contact form variables
+// const form = document.querySelector("[data-form]");
+// const formInputs = document.querySelectorAll("[data-form-input]");
+// const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// // add event to all form input field
+// for (let i = 0; i < formInputs.length; i++) {
+//   formInputs[i].addEventListener("input", function () {
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+//     // check form validation
+//     if (form.checkValidity()) {
+//       formBtn.removeAttribute("disabled");
+//     } else {
+//       formBtn.setAttribute("disabled", "");
+//     }
 
-  });
-}
+//   });
+// }
 
 
 
