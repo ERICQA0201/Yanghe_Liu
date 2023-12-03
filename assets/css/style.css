@@ -619,52 +619,21 @@ a.download-button:hover, a.download-button:focus {
 
 .filter-select-box {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   height: 40px;
   width: 130px;
 }
 
 .filter-select {
-  background: hsl(240, 2%, 12%);
-  color: #d8d8d8;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  font-size: var(--fs-6);
-  font-weight: 300;
-}
-
-.filter-select.active .select-icon { 
-  transform: rotate(0.5turn); 
+  visibility: hidden;
 }
 
 .select-list {
-  background: var(--eerie-black-2);
-  position: absolute;
-  top: calc(100%);
-  width: 100%;
-  padding: 6px;
-  border: 1px solid var(--jet);
-  border-radius: 14px;
-  z-index: 2;
-  opacity: 0;
   visibility: hidden;
-  pointer-events: none;
-  transition: 0.15s ease-in-out;
-}
-
-.filter-select.active + .select-list {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
 }
 
 .select-item button {
-  background: var(--eerie-black-2);
+  background: hsl(240, 2%, 10%);
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
@@ -691,11 +660,6 @@ a.download-button:hover, a.download-button:focus {
   animation: scaleUp 0.25s ease forwards;
 }
 
-@keyframes scaleUp {
-  0% { transform: scale(0.5); }
-  100% { transform: scale(1); }
-}
-
 .project-item > a { width: 100%; }
 
 .project-img {
@@ -719,32 +683,6 @@ a.download-button:hover, a.download-button:focus {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
-
-.project-item-icon-box {
-  --scale: 0.8;
-
-  background: var(--jet);
-  color: var(--orange-yellow-crayola);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.project-item > a:hover .project-item-icon-box {
-  --scale: 1;
-  opacity: 1;
-}
-
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
-
 .project-img img {
   width: 100%;
   height: 170px;
@@ -753,6 +691,8 @@ a.download-button:hover, a.download-button:focus {
 }
 
 .project-item > a:hover img { transform: scale(1.2); }
+
+.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
 
 .project-title,.project-category { 
   margin-left: 12px; 
@@ -1192,9 +1132,6 @@ a.download-button:hover, a.download-button:focus {
 }
 
 
-
-
-
 /**
  * responsive larger than 1024px screen
  */
@@ -1296,18 +1233,7 @@ a.download-button:hover, a.download-button:focus {
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
 
-
-
-  /**
-   * BLOG
-   */
-
-  .blog-banner-box { height: 230px; }
-
 }
-
-
-
 
 
 /**
