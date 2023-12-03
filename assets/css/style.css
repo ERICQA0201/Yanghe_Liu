@@ -179,8 +179,9 @@ article.active {
 .h3,
 .h4,
 .h5 {
-  color: var(--white-2);
+  color: #28262c;
   text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
 .h2 { font-size: var(--fs-1); }
@@ -194,12 +195,12 @@ article.active {
   font-weight: var(--fw-500);
 }
 
-.article-title {
+.resume-title {
   position: relative;
   padding-bottom: 7px;
 }
 
-.article-title::after {
+.resume-title::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -430,7 +431,7 @@ main {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title { 
+.about .resume-title { 
   margin-bottom: 15px; 
   color: #353536;
 }
@@ -501,154 +502,113 @@ main {
   line-height: 1.6;
 }
 
-
-/**
- * #clients 
- */
-
-.clients { margin-bottom: 15px; }
-
-.clients-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
-}
-
-.clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
-}
-
-.clients-item img {
-  width: 100%;
-  filter: grayscale(1);
-  transition: var(--transition-1);
-}
-
-.clients-item img:hover { filter: grayscale(0); }
-
-
-
-
-
 /*-----------------------------------*\
   #RESUME
 \*-----------------------------------*/
 
-.article-title { margin-bottom: 30px; }
+.resume-title { 
+  margin-bottom: 30px; 
+  color: #28262c;
+}
 
 
 /**
  * education and experience 
  */
 
-.timeline { margin-bottom: 30px; }
+.experience { margin-bottom: 30px; }
 
-.timeline .title-wrapper {
+.experience .title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 25px;
 }
 
-.timeline-list {
+.experience-list {
   font-size: var(--fs-6);
   margin-left: 45px;
 }
 
-.timeline-item { position: relative; }
 
-.timeline-item:not(:last-child) { margin-bottom: 20px; }
-
-.timeline-item-title {
-  font-size: var(--fs-6);
-  line-height: 1.3;
-  margin-bottom: 7px;
-}
-
-.timeline-list span {
-  color: var(--vegas-gold);
-  font-weight: var(--fw-400);
+.experience-list span {
+  color: #39227a;
+  font-weight: 400;
   line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -30px;
-  width: 1px;
-  height: calc(100% + 50px);
-  background: var(--jet);
-}
-
-.timeline-item::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-  background: var(--text-gradient-yellow);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
-}
-
-.timeline-text {
-  color: var(--light-gray);
-  font-weight: var(--fw-300);
+.experience-description {
+  color: #28262c;
+  font-weight: 350;
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-
-/**
- * skills 
- */
-
-.skills-title { margin-bottom: 20px; }
-
-.skills-list { padding: 20px; }
-
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+a.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: #6750a4; /* Blue color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 40px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
+a.download-button:hover, a.download-button:focus {
+  background-color: #8072a7; /* Darker blue on hover/focus */
+  color: #fff;
+  text-decoration: none;
 }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-}
+.skills-wrapper {
+    align-items: center;
+    border: 1px solid;
+    border-color: #424242;
+    border-radius: 20px;
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 3px 15px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .skill_box {
+    color: #3a3a3a;
+    font-family: "Open Sans", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+  }
 
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
-}
+  .experience-item {
+    margin-bottom: 40px;
+  }
 
+  .experience-description-list {
+    padding-left: 20px; /* Adjusts indentation */
+    margin-left: 0; /* Removes any default margin */
+  }
+  
+  .experience-description-item {
+    list-style-type: disc !important; /* Ensures bullet points are used */
+    margin-bottom: 10px; /* Space between each list item, adjust as needed */
+  }
 
-
+  .experience-item-title {
+    color: #3a3a3a;
+    font-size: 20px;
+    font-weight: 600;
+  }
 
 
 /*-----------------------------------*\
@@ -876,12 +836,12 @@ main {
     padding: 30px;
   }
 
-  .article-title {
+  .resume-title {
     font-weight: var(--fw-600);
     padding-bottom: 15px;
   }
 
-  .article-title::after {
+  .resume-title::after {
     width: 40px;
     height: 5px;
   }
@@ -969,7 +929,7 @@ main {
    * #ABOUT
    */
 
-  .about .article-title { margin-bottom: 20px; }
+  .about .resume-title { margin-bottom: 20px; }
 
   .about-text { margin-bottom: 40px; }
 
@@ -1072,11 +1032,11 @@ main {
    * #RESUME
    */
 
-  .timeline-list { margin-left: 65px; }
+  .experience-list { margin-left: 65px; }
 
-  .timeline-item:not(:last-child)::before { left: -40px; }
+  .experience-item:not(:last-child)::before { left: -40px; }
 
-  .timeline-item::after {
+  .experience-item::after {
     height: 8px;
     width: 8px;
     left: -43px;
@@ -1183,7 +1143,7 @@ main {
    * PORTFOLIO
    */
 
-  .article-title { padding-bottom: 20px; }
+  .resume-title { padding-bottom: 20px; }
 
   .filter-select-box { display: none; }
 
@@ -1461,6 +1421,6 @@ main {
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 700px; }
+  .experience-description { max-width: 700px; }
 
 }
